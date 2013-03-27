@@ -1,6 +1,6 @@
 {
   "name": "oj-markdown",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "src/oj.markdown.js",
   "description": "Markdown plugin for oj",
   "homepage": "http://github.com/ojjs/oj-markdown/",

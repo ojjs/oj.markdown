@@ -8,6 +8,6 @@ module.exports = function(oj,settings){
 
   // oj.markdown
   return {markdown:function(input){
-    return oj(marked(input));
+    return oj.emit(marked(input));
   }};
 };
