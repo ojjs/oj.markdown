@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "src/oj.markdown.js",
   "description": "Markdown plugin for oj",
-  "homepage": "http://github.com/ojjs/oj-markdown/",
+  "homepage": "http://github.com/ojjs/oj.markdown/",
   "keywords": [
     "oj",
     "markdown",
@@ -15,6 +15,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/ojjs/oj-markdown.git"
+    "url": "git://github.com/ojjs/oj.markdown.git"
   }
 }
