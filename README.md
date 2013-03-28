@@ -1,16 +1,19 @@
-oj-markdown
+oj.markdown
 ===========
 
-A markdown plugin for oj.
+A markdown plugin for oj. This plugin creates easy oj access to the very impressive [github.com/chjj/marked](https://github.com/chjj/marked). 
 
-This plugin creates easy oj access to the very impressive [github.com/chjj/marked](https://github.com/chjj/marked).
+Please give all credit to [Christopher](github.com/chjj). He did a fantastic job.
 
 ### Use Plugin:
 
-    oj.use(require('oj-markdown'), settings);
+    oj.use(require('oj.markdown'), settings);
+    
 
 ### Usage coffee-script
 
+    oj.use require 'oj.markdown'
+    
     html ->
       head ->
       body ->
@@ -19,10 +22,10 @@ This plugin creates easy oj access to the very impressive [github.com/chjj/marke
 
           Paragraph goes here
 
-          - Bulleted
-          - List
-          - Goes
-          - Here
+          * Bulleted
+          * List
+          * Goes
+          * Here
         """
 
 ### Settings
