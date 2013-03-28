@@ -1,7 +1,7 @@
 oj.markdown
 ===========
 
-A markdown plugin for oj. This plugin creates easy oj access to the very impressive [github.com/chjj/marked](https://github.com/chjj/marked).
+A markdown plugin for oj. This plugin creates easy oj access to [Christopher's](github.com/chjj) very impressive [github.com/chjj/marked](https://github.com/chjj/marked).
 
 ### Use Plugin:
 
