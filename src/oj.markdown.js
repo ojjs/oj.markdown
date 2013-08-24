@@ -1159,12 +1159,19 @@ plugin = function(oj,settings){
     settings = {}
   marked.setOptions(settings);
 
-  var md = function(input){
-    return oj.emit(marked(input));
+  var md = function(){
+    if (arguments.length > 0) {
+
+      // Since JavaScript doesn't have multi-line strings join args with newline
+      var args = Array.prototype.slice.call(arguments, 0);
+
+      // Emit markdown as if it was a tag method
+      return oj.emit(marked(args.join('\n')));
+    }
   };
 
-  // oj.markdown, oj.marked, oj.md
-  return {markdown:md, marked:md, md:md};
+  // Export to oj as oj.markdown and oj.md
+  return {markdown:md, md:md};
 };
 
 // Export to OJ
