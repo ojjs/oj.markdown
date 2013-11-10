@@ -1,0 +1,24 @@
+{
+  "name": "oj-markdown",
+  "version": "0.2.10",
+  "main": "oj.markdown.js",
+  "homepage": "http://ojjs.org/plugins.html#markdown",
+  "authors": [
+    "Evan Moran <evan@evanmoran.com>"
+  ],
+  "description": "Markdown plugin for OJ",
+  "keywords": [
+    "oj",
+    "plugin",
+    "markdown"
+  ],
+  "license": "MIT",
+  "ignore": [
+    ".DS_Store",
+    ".git",
+    ".gitignore",
+    "bower_components",
+    "package.json",
+    "node_modules"
+  ]
+}

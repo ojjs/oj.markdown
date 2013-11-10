@@ -1,7 +1,7 @@
 {
   "name": "oj-markdown",
-  "version": "0.2.9",
-  "main": "src/oj.markdown.js",
+  "version": "0.2.10",
+  "main": "oj.markdown.js",
   "description": "Markdown plugin for oj",
   "homepage": "http://ojjs.org",
   "keywords": [

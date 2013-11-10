@@ -846,6 +846,7 @@ Parser.prototype.tok = function() {
       return '<h'
         + this.token.depth
         + ' id="'
+        + this.options.headerPrefix
         + this.token.text.toLowerCase().replace(/[^\w]+/g, '-')
         + '">'
         + this.inline.output(this.token.text)
@@ -1043,7 +1044,7 @@ function marked(src, opt, callback) {
       opt = null;
     }
 
-    opt = opt ? merge({}, marked.defaults, opt) : marked.defaults;
+    opt = merge({}, marked.defaults, opt || {});
 
     var highlight = opt.highlight
       , tokens
@@ -1134,7 +1135,8 @@ marked.defaults = {
   silent: false,
   highlight: null,
   langPrefix: 'lang-',
-  smartypants: false
+  smartypants: false,
+  headerPrefix: ''
 };
 
 /**
@@ -1153,7 +1155,7 @@ marked.inlineLexer = InlineLexer.output;
 marked.parse = marked;
 
 // Create a plugin by defining a function that accepts oj and returns a map of extensions to oj
-plugin = function(oj,settings){
+var plugin = function(oj,settings){
   // Initialize marked options
   if (typeof settings !== 'object')
     settings = {}
@@ -1178,9 +1180,11 @@ plugin = function(oj,settings){
 if (typeof oj != 'undefined')
   oj.use(plugin);
 
-// Export to Node
-if (typeof module != 'undefined' && typeof module.exports != 'undefined')
+if (typeof exports === 'object') {
   module.exports = plugin;
+} else if (typeof define === 'function' && define.amd) {
+  define(function() { return plugin; });
+}
 
 }).call(function() {
   return this || (typeof window !== 'undefined' ? window : global);
